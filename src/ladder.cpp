@@ -69,7 +69,7 @@ vector<string> generate_word_ladder(const string& begin_word, const string& end_
         
         string last_word = ladder.back();
         
-        // Check if the end word is adjacent to the last word
+        // Check if end word is adjacent to the last word
         if (is_adjacent(last_word, end_word)) {
             ladder.push_back(end_word);
             return ladder;
