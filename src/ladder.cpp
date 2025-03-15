@@ -76,8 +76,8 @@ vector<string> generate_word_ladder(const string& begin_word, const string& end_
         }
         
         // try all words in dictionary
-        for (const string& word : word_list) {
-            if (!visited.count(word) && is_adjacent(last_word, word)) {
+       for (const string& word : word_list) {
+    if (!visited.count(word) && is_adjacent(last_word, word)) {
                 visited.insert(word);
                 vector<string> new_ladder = ladder;
                 new_ladder.push_back(word);
