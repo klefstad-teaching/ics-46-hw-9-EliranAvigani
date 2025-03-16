@@ -2,10 +2,12 @@
 #include <algorithm>
 
 vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& previous) {
-    int n = G.numVertices;
-    vector<int> distance(n, INF);
-    vector<bool> visited(n, false);
-    previous.resize(n, -1);
+   int n = G.numVertices;
+    vector<int> distance;
+    vector<bool> visited;
+    distance.assign(n, INF);
+    visited.assign(n, false);
+    previous.assign(n, -1);
     using Node = pair<int, int>; 
     priority_queue<Node, vector<Node>, greater<Node>> pq;
     
